@@ -40,8 +40,24 @@ from idlelib.replace import replace
 # задача 2
 # Напишите программу, которая принимает строку и
 # удаляет из нее все пробелы.
-def string(s):
-    return s.replace(' ', '')
-str = input('Введите строку: ')
-result = string(str)
-print(result)
+
+# def string(s):
+#     return s.replace(' ', '')
+# str = input('Введите строку: ')
+# result = string(str)
+# print(result)
+
+# задача 3
+# Напишите программу, которая принимает строку и
+# выводит на экран самое длинное слово в ней.
+#
+# string = input('Введите строку: ').split()
+# max_word = ''
+# for w in string:
+#     clean_word = ''
+#     for c in w:
+#         if c.isalpha():
+#             clean_word += c
+# if len(clean_word) > len(max_word):
+#     max_word = clean_word
+# print(f'Самое длинное слово: {max_word}')
