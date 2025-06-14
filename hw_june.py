@@ -114,4 +114,4 @@
 #     b = distance(x2, y2, x3, y3)
 #     c = distance(x3, y3, x1, y1)
 #     return a + b + c
-# print(trngl_per(1, 2, 4, 5, 6,7))
+# print(trngl_per(1, 2, 4, 5, 6, 7))
