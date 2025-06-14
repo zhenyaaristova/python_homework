@@ -68,13 +68,13 @@
 # количество символов в этом имени (без учета
 # пробелов).
 
-def greet_and_count(user_name):
-    print(f'Привет, {user_name}! Добро пожаловать!')
-name = input('Введите имя пользователя: ')
-greet_and_count(name)
-
-count = 0
-for x in name:
-    if x.isalpha():
-        count += 1
-print(f'Количество букв в твоем имени (не считая пробелов): {count}')
+# def greet_and_count(user_name):
+#     print(f'Привет, {user_name}! Добро пожаловать!')
+# name = input('Введите имя пользователя: ')
+# greet_and_count(name)
+#
+# count = 0
+# for x in name:
+#     if x.isalpha():
+#         count += 1
+# print(f'Количество букв в твоем имени (без учетов пробелов): {count}')
