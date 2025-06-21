@@ -115,3 +115,51 @@
 #     c = distance(x3, y3, x1, y1)
 #     return a + b + c
 # print(trngl_per(1, 2, 4, 5, 6, 7))
+
+# задача 19
+# def pointInRect(x, y, x1, y1, x2, y2):
+#     return x1 <= x <= x2 and y2 <= y <= y1
+#
+# x = int(input('Введите координату х исходной точки: '))
+# у = int(input('Введите координату у исходной точки: '))
+# x1 = int(input('Введите координату х левого верхнего угла прямоугольника: '))
+# у1 = int(input('Введите координату у левого верхнего угла прямоугольника: '))
+# x2 = int(input('Введите координату х правого нижнего угла прямоугольника: '))
+# у2 = int(input('Введите координату у правого нижнего угла прямоугольника: '))
+#
+# print(pointInRect(x, y, x1, y1, x2, y2))
+
+# задача 20
+def side_len(x1, y1, x2, y2):
+    return ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+
+def tri_area(a, b, c):
+    p = (a + b + c)/2
+    return (p * (p - a) * (p - b) * (p - c))**0.5
+
+def pointInTriangle(px, py, x1, y1, x2, y2, x3, y3):
+    a = side_len(x1, y1, x2, y2)
+    b = side_len(x2, y2, x3, y3)
+    c = side_len(x3, y3, x1, y1)
+    area_abc = tri_area(a, b, c)
+
+    a1 = side_len(px, py, x1, y1)
+    b1 = side_len(px, py, x2, y2)
+    c1 = side_len(x1, y1, x2, y2)
+    area_pab = tri_area(a1, b1, c1)
+
+    a2 = side_len(px, py, x2, y2)
+    b2 = side_len(px, py, x3, y3)
+    c2 = side_len(x2, y2, x3, y3)
+    area_pbc = tri_area(a2, b2, c2)
+
+    a3 = side_len(px, py, x3, y3)
+    b3 = side_len(px, py, x1, y1)
+    c3 = side_len(x3, y3, x1, y1)
+    area_pca = tri_area(a3, b3, c3)
+
+    total_area = area_pab + area_pbc + area_pca
+    # return abs(total_area - area_abc) < 1e-5
+    return round(total_area, 5) == round(area_abc, 5) # округление
+
+print(pointInTriangle(1, 1, 0, 0, 4, 0, 0,3))
