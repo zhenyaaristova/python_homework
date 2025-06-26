@@ -163,3 +163,13 @@
 #     return round(total_area, 5) == round(area_abc, 5) # округление
 #
 # print(pointInTriangle(1, 1, 0, 0, 4, 0, 0,3))
+
+# задача 21
+# def a(score):
+#     sorted_scores = sorted(score)
+#     remains = sorted_scores[1: -1]
+#     point = sum(remains)/3
+#     return point
+# result = a([5, 10, 100, 50, 6])
+# print(f'Итоговая оценка: {result}')
+
