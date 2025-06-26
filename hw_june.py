@@ -173,3 +173,39 @@
 # result = a([5, 10, 100, 50, 6])
 # print(f'Итоговая оценка: {result}')
 
+# задача 11
+# Составить программу, в результате которой
+# величина а меняется значением с величиной b, а
+# величина c – с величиной d. (Определить процедуру,
+# осуществляющую обмен значениями двух переменных
+# величин.)
+#
+# def z(a, b, c, d):
+#     a, b = b, a
+#     c, d = d, c
+#     return a, b, c, d
+# result = z(5, 4, 10, 20)
+# print(result)
+
+# задача 12
+# def tri_per(a, b, c):
+#     p = a + b + c
+#     return p
+#
+# def tri_area(a, b, c):
+#     pp = (a + b + c)/2
+#     s = pow((pp * (pp - a) * (pp - b) * (pp - c)), 0.5)
+#     return s
+#
+# print('Введите стороны первого треугольника: ')
+# a1 = int(input('a1: '))
+# b1 = int(input('b1: '))
+# c1 = int(input('c1: '))
+# print('Введите стороны второго треугольника: ')
+# a2 = int(input('a2: '))
+# b2 = int(input('b2: '))
+# c2 = int(input('c2: '))
+# per = tri_per(a1, b1, c1) + tri_per(a2, b2, c2)
+# area = tri_area(a1, b1, c1) + tri_area(a2, b2, c2)
+# print(f'Сумма периметров: {per}')
+# print(f'Сумма площадей: {area}')
