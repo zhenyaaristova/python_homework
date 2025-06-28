@@ -231,7 +231,8 @@ class Rectangle:
         return self.perimeter
 
 class Square(Rectangle):
-    def rect(self, side):
+    def __init__(self, side):
+        super().__init__(side, side)
         self.side = side
 
 # задание 2
@@ -255,7 +256,8 @@ class Person:
               f'Пол: {self.gender}')
 
 class Employee(Person):
-    def worker(self, salary, position):
+    def __init__(self, name, age, gender, salary, position):
+        super().__init__(name, age, gender)
         self.salary = salary
         self.position = position
 
