@@ -179,7 +179,7 @@
 # величина c – с величиной d. (Определить процедуру,
 # осуществляющую обмен значениями двух переменных
 # величин.)
-#
+
 # def z(a, b, c, d):
 #     a, b = b, a
 #     c, d = d, c
@@ -209,3 +209,56 @@
 # area = tri_area(a1, b1, c1) + tri_area(a2, b2, c2)
 # print(f'Сумма периметров: {per}')
 # print(f'Сумма площадей: {area}')
+
+# задание 1
+# Создайте класс Rectangle, который будет содержать
+# атрибуты width и height и методы area() и perimeter().
+# Создайте класс Square, который будет наследовать
+# класс Rectangle и содержать только атрибут side (а не
+# width и height).
+
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        self.area = self.width * self.height
+        return self.area
+
+    def perimeter(self):
+        self.perimeter = (self.width + self.height) * 2
+        return self.perimeter
+
+class Square(Rectangle):
+    def rect(self, side):
+        self.side = side
+
+# задание 2
+# Создайте класс Person, который будет содержать
+# атрибуты name, age, gender и метод introduce(), который
+# будет выводить на экран информацию о человеке.
+# Создайте класс Employee, который будет наследовать
+# класс Person и содержать атрибуты salary и position, а
+# также метод work(), который будет выводить на экран
+# информацию о работе сотрудника.
+
+class Person:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+    def  introduce(self):
+        print(f'Имя: {self.name}'
+              f'Возраст: {self.age}'
+              f'Пол: {self.gender}')
+
+class Employee(Person):
+    def worker(self, salary, position):
+        self.salary = salary
+        self.position = position
+
+    def work(self):
+        print(f'З/п: {self.salary}'
+              f'Должность: {self.position}')
