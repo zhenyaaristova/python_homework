@@ -217,23 +217,23 @@
 # класс Rectangle и содержать только атрибут side (а не
 # width и height).
 
-class Rectangle:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-    def area(self):
-        self.area = self.width * self.height
-        return self.area
-
-    def perimeter(self):
-        self.perimeter = (self.width + self.height) * 2
-        return self.perimeter
-
-class Square(Rectangle):
-    def __init__(self, side):
-        super().__init__(side, side)
-        self.side = side
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def area(self):
+#         self.area = self.width * self.height
+#         return self.area
+#
+#     def perimeter(self):
+#         self.perimeter = (self.width + self.height) * 2
+#         return self.perimeter
+#
+# class Square(Rectangle):
+#     def __init__(self, side):
+#         super().__init__(side, side)
+#         self.side = side
 
 # задание 2
 # Создайте класс Person, который будет содержать
@@ -244,23 +244,35 @@ class Square(Rectangle):
 # также метод work(), который будет выводить на экран
 # информацию о работе сотрудника.
 
-class Person:
-    def __init__(self, name, age, gender):
-        self.name = name
-        self.age = age
-        self.gender = gender
+# class Person:
+#     def __init__(self, name, age, gender):
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+#
+#     def  introduce(self):
+#         print(f'Имя: {self.name}'
+#               f'Возраст: {self.age}'
+#               f'Пол: {self.gender}')
+#
+# class Employee(Person):
+#     def __init__(self, name, age, gender, salary, position):
+#         super().__init__(name, age, gender)
+#         self.salary = salary
+#         self.position = position
+#
+#     def work(self):
+#         print(f'З/п: {self.salary}'
+#               f'Должность: {self.position}')
 
-    def  introduce(self):
-        print(f'Имя: {self.name}'
-              f'Возраст: {self.age}'
-              f'Пол: {self.gender}')
-
-class Employee(Person):
-    def __init__(self, name, age, gender, salary, position):
-        super().__init__(name, age, gender)
-        self.salary = salary
-        self.position = position
-
-    def work(self):
-        print(f'З/п: {self.salary}'
-              f'Должность: {self.position}')
+# задача (Фибоначчи)
+# def fibonacci(n):
+#     if n <= 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return fibonacci(n - 1) + fibonacci(n - 2)
+#
+# n = int(input('Введите номер числа Фибоначчи: '))
+# print(f'{n} число Фибоначчи', fibonacci(n))
